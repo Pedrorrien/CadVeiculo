@@ -1,11 +1,9 @@
 class Veiculo:
-    # __init_ => é o método construtor
     def __init__(self, marca, modelo, placa, ano):
         self.__marca = marca
         self.__modelo = modelo
         self.__placa = placa
         self.__ano = ano
-    #Métodos getters and setters para os atributos privados
     def get_marca(self):
         return self.__marca
     def set_marca(self, marca):
@@ -32,3 +30,4 @@ class Veiculo:
  - Modelo: {self.__modelo}
  - Placa: {self.__placa}
  - Ano: {self.__ano}'''
+    

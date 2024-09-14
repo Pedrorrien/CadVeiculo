@@ -1,15 +1,15 @@
 from Carro import Carro
 from Moto import Moto
+from Caminhao import Caminhao
 from Veiculo import Veiculo
 
-#BD em memória
 listaVeiculos = [
     Carro("Hyundai", "HB20", "ABC", 2023, 4),
     Moto("Yamaha", "Lander", "DEF", 2008, 250)
 ]
 
 def cadastrar():
-    print("Qual o tipo de veículo: (1) Carro - (2) Moto")
+    print("Qual o tipo de veículo: (1) Carro - (2) Moto - (3) Caminhão")
     tipo = input()
     print("Digite a marca:")
     marca = input()
@@ -25,8 +25,10 @@ def cadastrar():
     elif tipo == "2":
         cilindradas = input("Digite as cilindradas: ")
         veiculoAdd = Moto(marca, modelo, placa, ano, cilindradas)
+    elif tipo == "3":
+        capacidade = input("Digite a capacidae de carga: ")
+        veiculoAdd = Caminhao(marca, modelo, placa, ano, capacidade)
     listaVeiculos.append(veiculoAdd)
-
 def listar():
     if len(listaVeiculos) == 0:
         print ("Não existem veículos cadastrados")
